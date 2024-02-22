@@ -15,7 +15,7 @@ public class HelloApplication extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("mainPanel.fxml"));
         Pane root = fxmlLoader.load(); // Utilizați un obiect Pane ca rădăcină
 
-        Scene scene = new Scene(root, 500, 500);
+        Scene scene = new Scene(root, 800, 600);
         stage.setTitle("Hello!");
         stage.setScene(scene);
         stage.show();

@@ -1,11 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.paint_demo.HelloController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #86A789;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.paint_demo.HelloController">
    <children>
-      <Canvas fx:id="paintCanvas" height="500.0" layoutX="50.0" layoutY="50.0" onMouseDragged="#handleMouseDragged" onMouseMoved="#handleMouseMoved" onMousePressed="#handleMousePressed" onMouseReleased="#handleMouseReleased" width="500.0" />
+      <Pane layoutX="231.0" layoutY="125.0" prefHeight="350.0" prefWidth="350.0" style="-fx-background-color: #FFFFFF;">
+         <children>
+            <Canvas fx:id="paintCanvas" height="350.0" onMouseDragged="#handleMouseDragged" onMouseMoved="#handleMouseMoved" onMousePressed="#handleMousePressed" onMouseReleased="#handleMouseReleased" width="350.0" />
+         </children>
+      </Pane>
+      <Button fx:id="arcButton" layoutX="46.0" layoutY="262.0" mnemonicParsing="false" onAction="#handleArcButtonAction" prefHeight="25.0" prefWidth="133.0" style="-fx-background-color: #4F6F52;" text="Arc" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+      <Button fx:id="segmentButton" layoutX="46.0" layoutY="220.0" mnemonicParsing="false" onAction="#handleSegmentButtonAction" prefHeight="25.0" prefWidth="133.0" style="-fx-background-color: #4F6F52;" text="Segment" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+      <Button fx:id="gcode" layoutX="618.0" layoutY="220.0" mnemonicParsing="false" onAction="#generateGCode" prefHeight="25.0" prefWidth="154.0" style="-fx-background-color: #4F6F52;" text="Generate G-code" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+      <Pane layoutY="535.0" prefHeight="65.0" prefWidth="800.0" style="-fx-background-color: #4F6F52;" />
+      <Pane prefHeight="65.0" prefWidth="800.0" style="-fx-background-color: #4F6F52;">
+         <children>
+            <Text fill="WHITE" layoutX="328.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CNC DESIGN">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Text fill="WHITE" layoutX="46.0" layoutY="199.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select yout tool">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="618.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Finish your design">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
    </children>
 </Pane>
